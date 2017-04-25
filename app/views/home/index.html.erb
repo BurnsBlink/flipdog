@@ -1,15 +1,9 @@
-<h1>Homepage</h1>
+<h4>Homepage</h4>
 <% @posts.each do |post| %>
   <p><%= post.dog_name %></p>
-  <%=image_tag(post.image_url, size: "300x350")%>
+  <%=image_tag(post.image_url, size: "300x330")%>
   <p><%= post.description %></p>
 <% end %>
-
-<ul>
-<% flash.each do |key, msg| %>
-  <%= content_tag :li, msg, id: key %>
-<% end %>
-</ul>
 
 <p><%= link_to 'Sign in with Facebook', signin_path %></p>
 <p><%= link_to 'Sign out', signout_path %></p>
