@@ -1,4 +1,7 @@
-<h1>AYE</h1>
+<div class="main-body">
+<h2>AYE</h2>
 
-
-<p><%= link_to 'Sign in with Facebook', signin_path %></p>
+  <p><%= @post.dog_name %></p>
+  <%=image_tag(@post.image_url, class: "upload")%>
+  <p><%= @post.description %></p>
+</div>
