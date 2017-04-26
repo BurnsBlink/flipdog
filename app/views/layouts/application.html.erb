@@ -11,20 +11,31 @@
     <%= csrf_meta_tags %>
   </head>
 
+  <header>
+    <div class="row">
+      <div class="text-right columns">
+        <% if current_user.present? %>
+          <span><%= link_to "Log Out", destroy_user_session_path, :method => :delete %><span></br>
+        <% else %>
+          <%= link_to "Facebook Sign-in", user_facebook_omniauth_authorize_path %>
+          <%= link_to "Log In", new_user_session_path%>
+          <%= link_to "Sign Up", new_user_registration_path%>
+        <% end %>
+      </div>
+    </div>
+  </header>
+
   <body>
-    <ul class="navigation">
-      <li class="nav-item"><a href="#">Home</a></li>
-      <li class="nav-item"><a href="#">Profile</a></li>
-      <li class="nav-item"><a href="#">GIFs</a></li>
-      <li class="nav-item"><a href="#">About</a></li>
-      <li class="nav-item"><a href="#">Contact</a></li>
-    </ul>
 
-    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger"></label>
-
-    <div class="site-wrap text-center">
-      <%= yield %>
+    <div class="row">
+      <div class="text-center">
+        <% flash.each do |kind, message| %>
+        <p><%= message %></p>
+        <% end %>
+      </div>
+      <div class="text-center">
+        <%= yield %>
+      </div>
     </div>
 
   </body>

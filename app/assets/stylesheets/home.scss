@@ -2,9 +2,36 @@ $primary-blue: #006aa7;
 $light-grey: #a8a8a8;
 $primary-yellow: #fecc00;
 $primary-white: #f0f0f0;
+$background: #f4f4f4;
+$primary-black: #0A0310;
+
+body {
+  padding-bottom: 80px;
+  background-image: image-url("paw.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-blend-mode: screen;
+  background-color: $background;
+  border-radius: 2%;
+}
+
+header {
+  background-color: $primary-blue;
+  padding-bottom: 2px;
+  border-bottom: 2px solid $primary-yellow;
+}
+
+a {
+  color: $primary-white;
+}
+
+a:hover {
+  color: $primary-yellow;
+}
 
 .title {
   font-family: cursive;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -15,21 +42,6 @@ $primary-white: #f0f0f0;
   border-radius: 4%;
   max-height: 450px;
   max-width: 300px;
-}
-
-.main-body {
-  margin-top: -50px;
-  margin-bottom: -63px;
-  padding-bottom: 80px;
-  background-image: image-url("paw.png");
-  background-repeat: repeat-x;
-  background-position: center;
-  background-blend-mode: screen;
-  background-color: #f4f4f4;
-  border-top: 4px solid $primary-blue;
-  border-left: 1px solid $primary-yellow;
-  border-right: 1px solid $primary-yellow;
-  border-radius: 2%;
 }
 
 .dog-name{
