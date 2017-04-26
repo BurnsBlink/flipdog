@@ -1,6 +1,6 @@
 <div class="main-body">
-<h2 class="title">flipdog</h2>
-  <p>-- <%= @post.dog_name %> --</p>
+<h1 class="title">flipdog</h1>
+  <p class="dog-name">-- <%= @post.dog_name %> --</p>
   <%=image_tag(@post.image_url, class: "upload")%>
-  <p><%= @post.description %></p>
+  <p class="description"><%= @post.description %></p>
 </div>
