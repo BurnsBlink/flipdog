@@ -19,7 +19,7 @@ class Home extends Component {
         id: posts.id,
         dogName: posts.dog_name,
         image: posts.image_url,
-        description: posts.description
+        description: posts.description,
       })
     })
   }
@@ -34,6 +34,7 @@ class Home extends Component {
           dogName={this.state.dogName}
           image={this.state.image}
           description={this.state.description}
+          userName={this.state.userName}
         />
       </div>
     )
