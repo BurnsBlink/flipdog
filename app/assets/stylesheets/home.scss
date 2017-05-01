@@ -4,6 +4,7 @@ $primary-yellow: #fecc00;
 $primary-white: #f0f0f0;
 $background: #f4f4f4;
 $primary-black: #0A0310;
+@import url('https://fonts.googleapis.com/css?family=Finger+Paint');
 
 body {
   padding-bottom: 80px;
@@ -30,7 +31,7 @@ a:hover {
 }
 
 .title {
-  font-family: cursive;
+  font-family: 'Finger Paint', cursive;
   margin-top: 10px;
   margin-bottom: 20px;
 }

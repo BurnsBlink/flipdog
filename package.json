@@ -11,6 +11,7 @@
   },
   "author": "",
   "license": "ISC",
+  "proxy": "http://localhost:3000",
   "devDependencies": {
     "enzyme": "^2.2.0",
     "isparta-loader": "^2.0.0",
