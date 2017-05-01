@@ -1,0 +1,34 @@
+.upvote {
+  width: 80px;
+  height: 50px;
+  background: lightgreen;
+  transition:all 0.1s ease;
+  outline: none;
+  border-radius: 20%;
+}
+
+.upvote:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: green;
+  color: white;
+}
+
+.next {
+  margin-top: 80px;
+  width: 80px;
+  height: 50px;
+  background: lightblue;
+  transition:all 0.1s ease;
+  outline: none;
+  border-radius: 20%;
+}
+
+.next:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: #006aa7;
+  color: white;
+}

@@ -6,15 +6,13 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-
     }
   }
 
   render() {
     return(
       <Router history={browserHistory}>
-        <Route path="/" component={Home}>
-        </Route>
+        <Route path="/" component={Home}/>
       </Router>
     )
   }

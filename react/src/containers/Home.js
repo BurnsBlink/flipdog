@@ -7,10 +7,15 @@ class Home extends Component {
     super(props);
     this.state = {
     }
+    this.getPostData = this.getPostData.bind(this)
   }
 
-  componentDidMount(){
-    fetch('/api/v1/posts', {credentials: 'same-origin'})
+  componentDidMount() {
+    this.getPostData()
+  }
+
+  getPostData() {
+    fetch(`/api/v1/posts`, {credentials: 'same-origin'})
     .then(response => {
       let parsed = response.json()
       return parsed
@@ -29,6 +34,7 @@ class Home extends Component {
       <div>
         <h1 className="title">flipdog</h1>
         <PostTile
+          nextDog={this.getPostData}
           key={this.state.id}
           id={this.state.id}
           dogName={this.state.dogName}
