@@ -15,7 +15,7 @@ class Profile extends Component {
     .then(user => {
       this.setState({
         id: user.id,
-        email: user.email,
+        email: user.email
       })
     })
   }
