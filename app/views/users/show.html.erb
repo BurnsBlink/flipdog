@@ -1,0 +1,13 @@
+<div id="app">
+</div>
+
+<center>
+<h1>Hi there <%= @user.email %>! </h1>
+<div class = "submissions">
+  <h2>My Past Submissions</h2>
+  <% @user.posts.each do |post| %>
+  <p><%=post.dog_name%></p>
+    <%=image_tag((post.image_url), class: "profile-upload")%>
+    <hr/>
+  <% end %>
+</div></center>

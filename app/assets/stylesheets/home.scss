@@ -8,10 +8,10 @@ $primary-black: #0A0310;
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 
 body {
-  font-family: 'Arvo', serif;
   padding-bottom: 80px;
   background-image: url('https://preview.ibb.co/cRMLY5/Untitled_design_1.png');
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
@@ -25,7 +25,7 @@ header {
   border-bottom: 2px solid $primary-yellow;
 }
 
-a {
+.logout, .login {
   color: $primary-white;
 }
 
@@ -50,11 +50,12 @@ a:hover {
 }
 
 .dog-name{
+  font-family: 'Arvo', serif;
   font-size: 35px;
 }
 
 .description {
+  font-family: 'Arvo', serif;
   margin-top: 5px;
   font-size: 18px;
-  width: 50%;
 }
