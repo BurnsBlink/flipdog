@@ -5,7 +5,7 @@ const PostTile = props => {
   return (
     <div className="row">
       <div className="large-4 columns">
-        <p className="dog-name">--{props.dogName}--</p>
+        <h1 className="dog-name">{props.dogName}</h1>
         <p className="description">{props.description}</p>
       </div>
       <div className="large-4 columns">
