@@ -40,6 +40,7 @@ class Home extends Component {
           dogName={this.state.dogName}
           image={this.state.image}
           description={this.state.description}
+          userName={this.state.userName}
         />
       </div>
     )
