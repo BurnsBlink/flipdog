@@ -16,11 +16,11 @@
     <div class="row">
       <div class="text-right columns">
         <% if current_user.present? %>
-          <span><%= link_to "Log Out", destroy_user_session_path, :method => :delete %><span></br>
+          <span><%= link_to "Log Out", destroy_user_session_path, class: "logout", :method => :delete %><span></br>
         <% else %>
-          <%= link_to "Facebook Sign-in", user_facebook_omniauth_authorize_path %>
-          <%= link_to "Log In", new_user_session_path%>
-          <%= link_to "Sign Up", new_user_registration_path%>
+          <%= link_to "Facebook Sign-in", user_facebook_omniauth_authorize_path, class: "login" %>
+          <%= link_to "Log In", new_user_session_path, class: "login"%>
+          <%= link_to "Sign Up", new_user_registration_path, class: "login"%>
         <% end %>
       </div>
     </div>
