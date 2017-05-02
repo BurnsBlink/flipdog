@@ -24,7 +24,7 @@ class Home extends Component {
         id: posts.id,
         dogName: posts.dog_name,
         image: posts.image_url,
-        description: posts.description,
+        description: posts.description
       })
     })
   }
