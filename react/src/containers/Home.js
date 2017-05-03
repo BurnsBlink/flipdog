@@ -30,7 +30,6 @@ class Home extends Component {
   }
 
   render() {
-    debugger;
     return(
       <div>
         <h1 className="title">flipdog</h1>
