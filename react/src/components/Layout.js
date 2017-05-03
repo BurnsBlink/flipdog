@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
-// import LayoutTile from '../components/LayoutTile';
 
 class Layout extends Component {
   constructor(props){
