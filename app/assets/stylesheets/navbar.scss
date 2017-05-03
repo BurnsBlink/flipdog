@@ -3,6 +3,21 @@ $light-grey: #a8a8a8;
 $primary-yellow: #fecc00;
 $primary-white: #f0f0f0;
 
-.menu {
-  color: $primary-blue;
+.hidden {
+  display: none;
+}
+
+header {
+  background-color: $primary-blue;
+  padding-bottom: 2px;
+  border-bottom: 2px solid $primary-yellow;
+}
+
+.logout, .login {
+  color: $primary-white;
+  padding-left: 15px;
+}
+
+.logout {
+  padding-right: 10px;
 }

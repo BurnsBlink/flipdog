@@ -18,7 +18,7 @@
         <% if current_user.present? %>
           <span><%= link_to "Log Out", destroy_user_session_path, class: "logout", :method => :delete %><span></br>
         <% else %>
-          <%= link_to "Facebook Sign-in", user_facebook_omniauth_authorize_path, class: "login" %>
+          <%= link_to image_tag("https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-facebook-square2-128.png", size: "25x25"), user_facebook_omniauth_authorize_path, class: "login" %>
           <%= link_to "Log In", new_user_session_path, class: "login"%>
           <%= link_to "Sign Up", new_user_registration_path, class: "login"%>
         <% end %>

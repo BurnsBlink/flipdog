@@ -19,16 +19,6 @@ body {
   border-radius: 2%;
 }
 
-header {
-  background-color: $primary-blue;
-  padding-bottom: 2px;
-  border-bottom: 2px solid $primary-yellow;
-}
-
-.logout, .login {
-  color: $primary-white;
-}
-
 a:hover {
   color: $primary-yellow;
 }
@@ -50,11 +40,14 @@ a:hover {
 }
 
 .dog-name{
+  color: $primary-blue;
   font-family: 'Arvo', serif;
-  font-size: 35px;
+  font-size: 40px;
+  text-shadow: 1px 1px $primary-yellow;
 }
 
 .description {
+  color: $primary-blue;
   font-family: 'Arvo', serif;
   margin-top: 5px;
   font-size: 18px;
