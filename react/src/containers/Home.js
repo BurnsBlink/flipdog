@@ -39,6 +39,7 @@ class Home extends Component {
     return(
       <div>
         <h1 className="title">flipdog</h1>
+        <h5 id="footer" className={theme}>Current Theme: {theme}</h5>
         <PostTile
           nextDog={this.getPostData}
           key={this.state.id}
@@ -48,8 +49,7 @@ class Home extends Component {
           description={this.state.description}
           userName={this.state.userName}
           handleNew={this.handleNew}
-        /><hr/>
-        <h5 id="footer" className={theme}>Current Theme: {theme}</h5>
+        />
       </div>
     )
   }

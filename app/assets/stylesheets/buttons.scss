@@ -21,6 +21,7 @@ $primary-black: #0A0310;
   transform: scale(1.3);
   background-color: green;
   color: $primary-white;
+  cursor: url('http://www.rw-designer.com/icon-image/10132-24x24x32.png'), default;
 }
 
 .next {
@@ -39,6 +40,7 @@ $primary-black: #0A0310;
   transform: scale(1.3);
   background-color: $primary-blue;
   color: $primary-white;
+  cursor: url('http://www.rw-designer.com/icon-image/3190-24x24x32.png'), default;
 }
 
 .create {
@@ -58,6 +60,7 @@ $primary-black: #0A0310;
   transform: scale(1.3);
   background-color: $primary-yellow;
   color: $primary-black;
+  cursor: pointer;
 }
 
 .back {
