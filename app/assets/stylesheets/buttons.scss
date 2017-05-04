@@ -1,6 +1,13 @@
+$primary-blue: #006aa7;
+$light-grey: #a8a8a8;
+$primary-yellow: #fecc00;
+$primary-white: #f4f4f4;
+$background: #f4f4f4;
+$primary-black: #0A0310;
+
 .upvote {
   margin-top: 10px;
-  width: 80px;
+  width: 90px;
   height: 50px;
   background: lightgreen;
   transition:all 0.1s ease;
@@ -13,12 +20,12 @@
   -ms-transform: scale(1.3);
   transform: scale(1.3);
   background-color: green;
-  color: white;
+  color: $primary-white;
 }
 
 .next {
   margin-top: 20px;
-  width: 80px;
+  width: 90px;
   height: 50px;
   background: lightblue;
   transition:all 0.1s ease;
@@ -30,6 +37,43 @@
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
-  background-color: #006aa7;
-  color: white;
+  background-color: $primary-blue;
+  color: $primary-white;
+}
+
+.create {
+  color: black;
+  margin-top: 20px;
+  width: 90px;
+  height: 50px;
+  background: #fffd96;
+  transition:all 0.1s ease;
+  outline: none;
+  border-radius: 20%;
+}
+
+.create:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  background-color: $primary-yellow;
+  color: $primary-black;
+}
+
+.back {
+  margin-top: 20px;
+  width: 70px;
+  height: 35px;
+  background: lightblue;
+  transition:all 0.1s ease;
+  outline: none;
+  border-radius: 20%;
+}
+
+.back:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  background-color: $primary-blue;
+  color: $primary-white;
 }

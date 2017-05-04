@@ -13,7 +13,10 @@ const PostTile = props => {
       </div>
       <div className="large-4 columns">
         <button className="upvote" onClick={props.nextDog}>Upvote!</button><br/>
-        <button className="next" onClick={props.nextDog}>Next</button>
+        <button className="next" onClick={props.nextDog}>Next</button><br/>
+        <Link to={`/posts/new`}>
+          <button className="create">Add Photo!</button>
+        </Link>
       </div>
     </div>
   );
