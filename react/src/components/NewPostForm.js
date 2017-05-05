@@ -6,7 +6,7 @@ const NewPostForm = props => {
     <form onSubmit={props.handleSubmit}>
       Dog Name: <input type="text" value={props.dogName} onChange={props.handleNewDogName} />
       Description: <input type="text" value={props.description} onChange={props.handleNewDescription} />
-      Photo: <input type="file" value={props.image} onChange={props.handleNewImage} />
+      Photo: <center><input type="file" value={props.image} onChange={props.handleNewImage} /></center>
       <input type='submit' />
     </form>
 

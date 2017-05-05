@@ -35,11 +35,17 @@ class Home extends Component {
   }
 
   render() {
+    const divStyle = {
+      borderRight: '1pt solid grey',
+      width: "129px",
+      margin: "none"
+    };
     let theme = "Star-Wars"
     return(
       <div>
         <h1 className="title">flipdog</h1>
-        <h5 id="footer" className={theme}>Current Theme: {theme}</h5>
+        <h5 id={theme} className="footer">Current Theme: {theme}</h5>
+        <hr width="20%"/>
         <PostTile
           nextDog={this.getPostData}
           key={this.state.id}

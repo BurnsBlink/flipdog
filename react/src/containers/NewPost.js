@@ -18,6 +18,16 @@ class NewPost extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  componentDidMount() {
+    fetch(`/api/v1/users`, {credentials: 'same-origin'})
+    .then(response => response.json())
+    .then(user => {
+      this.setState({
+        id: user.id,
+      })
+    })
+  }
+
   handleNewDogName(event){
     let newDogName = event.target.value
     this.setState({ dogName: newDogName })
@@ -35,14 +45,24 @@ class NewPost extends Component {
 
   handleSubmit(event){
     event.preventDefault()
-    let requestBody = {dog_name: this.state.dogName, description: this.state.description, image_url: this.state.image }
-    fetch('/api/v1/posts', {method: 'POST', body: JSON.stringify(requestBody), credentials: 'same-origin' })
+    let requestBody = {
+      user_id: this.state.id,
+      dog_name: this.state.dogName,
+      description: this.state.description,
+      image_url: this.state.image
+    }
+    debugger;
+    fetch('/api/v1/posts', {
+      method: 'POST',
+      body: JSON.stringify(requestBody),
+      credentials: 'include'
+    })
     .then(response => {
       let parsed = response.json()
       return parsed
     }).then(message => {
-      this.setState({ message: message })
       debugger;
+      this.setState({ message: message })
     })
   }
 
