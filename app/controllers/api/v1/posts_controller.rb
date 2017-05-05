@@ -5,7 +5,6 @@ class Api::V1::PostsController < ApiController
   end
 
   def create
-    binding.pry
     body = request.body.read
     parsed = JSON.parse(body)
     post = Post.new(parsed)

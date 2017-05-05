@@ -23,7 +23,7 @@ class NewPost extends Component {
     .then(response => response.json())
     .then(user => {
       this.setState({
-        id: user.id,
+        id: user.id
       })
     })
   }
@@ -51,7 +51,6 @@ class NewPost extends Component {
       description: this.state.description,
       image_url: this.state.image
     }
-    debugger;
     fetch('/api/v1/posts', {
       method: 'POST',
       body: JSON.stringify(requestBody),
@@ -61,7 +60,6 @@ class NewPost extends Component {
       let parsed = response.json()
       return parsed
     }).then(message => {
-      debugger;
       this.setState({ message: message })
     })
   }
