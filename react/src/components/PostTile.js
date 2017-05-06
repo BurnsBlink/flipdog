@@ -7,6 +7,7 @@ const PostTile = props => {
       <div className="large-4 columns">
         <h1 className="dog-name">{props.dogName}</h1>
         <p className="description">{props.description}</p>
+        <p className="poster-name">human: {props.firstName} {props.lastInitial}.</p>
       </div>
       <div className="large-4 columns">
         <img className="upload" src={props.image}/>

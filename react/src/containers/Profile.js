@@ -15,7 +15,9 @@ class Profile extends Component {
     .then(user => {
       this.setState({
         id: user.id,
-        email: user.email
+        firstName: user.first_name,
+        lastName: user.last_name,
+        posts: user.posts[0]
       })
     })
   }
@@ -25,7 +27,9 @@ class Profile extends Component {
       <div>
         <ProfileTile
           id={this.state.id}
-          email={this.state.email}
+          firstName={this.state.firstName}
+          lastName={this.state.lastName}
+          posts={this.state.posts}
         />
       </div>
     )
