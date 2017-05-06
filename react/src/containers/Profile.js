@@ -16,7 +16,8 @@ class Profile extends Component {
       this.setState({
         id: user.id,
         firstName: user.first_name,
-        lastName: user.last_name
+        lastName: user.last_name,
+        posts: user.posts[0]
       })
     })
   }
@@ -28,6 +29,7 @@ class Profile extends Component {
           id={this.state.id}
           firstName={this.state.firstName}
           lastName={this.state.lastName}
+          posts={this.state.posts}
         />
       </div>
     )
