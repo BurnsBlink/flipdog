@@ -21,3 +21,11 @@ header {
 .logout {
   padding-right: 10px;
 }
+
+.navbar{
+  padding: 0px 3px;
+}
+
+.navbar:last-of-type {
+  border-left: 1px solid $light-grey;
+}

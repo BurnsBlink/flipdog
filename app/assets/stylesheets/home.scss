@@ -6,6 +6,7 @@ $background: #f4f4f4;
 $primary-black: #0A0310;
 @import url('https://fonts.googleapis.com/css?family=Finger+Paint');
 @import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
 
 body {
   padding-bottom: 80px;
@@ -53,9 +54,23 @@ a:hover {
   font-size: 20px;
 }
 
-.poster-name{
+.poster-name {
   color: $primary-black;
   font-family: 'Arvo', serif;
   font-size: 12px;
   margin-top: -10px;
+}
+
+.vote-count {
+  background-image: url('https://thumb.ibb.co/e70Yo5/votecount.png');
+  background-repeat: no-repeat;
+  background-size: 46px 46px;
+  background-position: center;
+  font-family: 'Arvo', serif;
+  font-size: 30px;
+  margin-bottom: -40px;
+  position: relative;
+  // left: 120px;
+  top: 14px;
+  color: $primary-white;
 }

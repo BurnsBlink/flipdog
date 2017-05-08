@@ -6,8 +6,8 @@ import themes from '../constants/themes'
 class Home extends Component {
   constructor(props){
     super(props);
-    this.state = {
-    }
+    this.state = {}
+    this.componentDidMount = this.componentDidMount.bind(this)
     this.getPostData = this.getPostData.bind(this)
   }
 
@@ -26,22 +26,15 @@ class Home extends Component {
         dogName: posts.dog_name,
         image: posts.image_url,
         description: posts.description,
+        userId: posts.user.id,
+        voteCount: posts.vote_count,
         firstName: posts.user.first_name,
         lastInitial: posts.user.last_name[0]
       })
     })
   }
 
-  handleNew() {
-    window.location.href="/posts/new";
-  }
-
   render() {
-    const divStyle = {
-      borderRight: '1pt solid grey',
-      width: "129px",
-      margin: "none"
-    };
     let theme = "Star-Wars"
     return(
       <div>
@@ -57,8 +50,7 @@ class Home extends Component {
           description={this.state.description}
           firstName={this.state.firstName}
           lastInitial={this.state.lastInitial}
-          userName={this.state.userName}
-          handleNew={this.handleNew}
+          voteCount={this.state.voteCount}
         />
       </div>
     )
