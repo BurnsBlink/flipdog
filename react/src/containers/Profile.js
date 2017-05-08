@@ -6,21 +6,16 @@ class Profile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      names: [],
+      dogNames: [],
       descriptions: [],
       images: []
     }
+    this.componentDidMount = this.componentDidMount.bind(this)
     this.getProfileData = this.getProfileData.bind(this)
   }
 
   componentDidMount() {
     this.getProfileData()
-    // let i=0
-    // for (i=0; i<this.state.posts.length; i++) {
-    //   this.state.names.push(this.state.posts[i].dog_name)
-    //   this.state.descriptions.push(this.state.posts[i].description)
-    //   this.state.images.push(this.state.posts[i].image_url)
-    // }
   }
 
   getProfileData() {
@@ -31,7 +26,9 @@ class Profile extends Component {
         id: user.id,
         firstName: user.first_name,
         lastName: user.last_name,
-        posts: user.posts
+        dogNames: user.posts.map(item => item.dog_name),
+        descriptions: user.posts.map(item => item.description),
+        images: user.posts.map(item => item.image_url)
       })
     })
   }
@@ -43,6 +40,9 @@ class Profile extends Component {
           id={this.state.id}
           firstName={this.state.firstName}
           lastName={this.state.lastName}
+          dogNames={this.state.dogNames}
+          descriptions={this.state.descriptions}
+          images={this.state.images}
         />
       </div>
     )
