@@ -62,6 +62,7 @@ class NewPost extends Component {
     }).then(message => {
       this.setState({ message: message })
     })
+    browserHistory.push('/')
   }
 
   render() {
