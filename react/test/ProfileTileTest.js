@@ -28,11 +28,4 @@ describe('PostTile', () => {
     expect(wrapper.find('img')).toBePresent();
     expect(wrapper.find('button')).toBePresent();
   });
-
-  it('should render a p, image, and button tags', () => {
-    expect(wrapper.find('p')).toBePresent();
-    expect(wrapper.find('img')).toBePresent();
-    expect(wrapper.find('button')).toBePresent();
-  });
-
 });
