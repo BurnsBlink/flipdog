@@ -15,16 +15,6 @@ class PostTile extends Component {
     this.setState({ voteCount: upvote })
   }
 
-  getUserData() {
-    fetch(`/api/v1/users`, {credentials: 'same-origin'})
-    .then(response => response.json())
-    .then(user => {
-      this.setState({
-       userId: user.id
-      })
-    })
-  }
-
   render() {
     return (
       <div className="row">
