@@ -10,7 +10,7 @@ class NewPost extends Component {
       dogName: '',
       description: '',
       image: '',
-      messages: []
+      message: []
     }
     this.handleNewDogName = this.handleNewDogName.bind(this)
     this.handleNewDescription = this.handleNewDescription.bind(this)
