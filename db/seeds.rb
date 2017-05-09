@@ -10,3 +10,9 @@ Post.create(dog_name: "Molly", vote_count: 9, image_url: "http://stories.barkpos
 Post.create(dog_name: "Sir Barksley", vote_count: 2, image_url: "https://img0.etsystatic.com/107/1/8256785/il_570xN.1054736492_okl7.jpg", description: "Rrrrrrr-ghghghghgh!", user: misty)
 Post.create(dog_name: "Baxter", image_url: "http://www3.pictures.zimbio.com/mp/r_Mf-uluvPrx.jpg", description: "Give me treats, you will...", user: fryguy)
 Post.create(dog_name: "King", vote_count: 22, image_url: "http://i1.mirror.co.uk/incoming/article6965338.ece/ALTERNATES/s615b/PAY-Storm-Trooper-Dog.jpg", description: "I even miss when I go pee-pees", user: misty)
+
+theme_arr = ["Superhero", "Star-Wars", "Pokemon", "Other-Animals", "Hats", "Sports", "Tacos", "Sunglasses", "Scarfs", "Harry-Potter", "Jackets"]
+theme = theme_arr.shuffle!
+theme.each do |theme|
+  Theme.create( theme: theme)
+end
