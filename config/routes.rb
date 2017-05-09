@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :users, only: [:show, :edit, :update, :destroy]
+  resources :themes, only: [:index]
 
   namespace :api do
     namespace :v1 do

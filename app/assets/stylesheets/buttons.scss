@@ -4,6 +4,7 @@ $primary-yellow: #fecc00;
 $primary-white: #f4f4f4;
 $background: #f4f4f4;
 $primary-black: #0A0310;
+$primary-green: green;
 
 .upvote {
   margin-top: 10px;
@@ -23,9 +24,14 @@ $primary-black: #0A0310;
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
-  color: green;
-  border: 1px solid green;
+  color: transparent;
+  border: 1px solid $primary-green;
   cursor: url('http://www.rw-designer.com/icon-image/10132-24x24x32.png'), default;
+}
+
+.upvote:active {
+  border: 3px double $primary-white;
+  box-shadow: 2px 2px 1px $light-grey;
 }
 
 .next {

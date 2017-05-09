@@ -26,6 +26,10 @@ header {
   padding: 0px 3px;
 }
 
+.navbar {
+  border-right: 1px solid $light-grey;
+}
+
 .navbar:last-of-type {
-  border-left: 1px solid $light-grey;
+  border-right: none;
 }
