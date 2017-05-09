@@ -29,6 +29,7 @@ class Layout extends Component {
           <div onClick={this.handleClick}>
             <Link className="navbar" to={`/`}>Home</Link>
             <Link className="navbar" to={`/users/1`}>Profile</Link>
+            <Link className="navbar" to={`themes`}>Past Winners</Link>
           </div>
         </div>
         {this.props.children}

@@ -4,6 +4,7 @@ import Home from '../containers/Home';
 import Profile from '../containers/Profile';
 import Layout from '../components/Layout';
 import NewPost from '../containers/NewPost';
+import ThemesController from '../containers/ThemesController';
 
 class App extends Component {
   constructor(props){
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/" component={Home}/>
           <Route path="/users/1" component={Profile}/>
           <Route path="/posts/new" component={NewPost}/>
+          <Route path="/themes" component={ThemesController}/>
         </Route>
       </Router>
     )

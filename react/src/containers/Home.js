@@ -42,7 +42,10 @@ class Home extends Component {
       let parsed = response.json()
       return parsed
     }).then(theme => {
-      this.setState({ theme: theme })
+      this.setState({
+        themeID: theme.id,
+        theme: theme.theme
+      })
     })
   }
 
