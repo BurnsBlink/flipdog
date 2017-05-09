@@ -9,10 +9,12 @@ class Home extends Component {
     this.state = {}
     this.componentDidMount = this.componentDidMount.bind(this)
     this.getPostData = this.getPostData.bind(this)
+    this.getCurrentTheme = this.getCurrentTheme.bind(this)
   }
 
   componentDidMount() {
     this.getPostData()
+    this.getCurrentTheme()
   }
 
   getPostData() {
@@ -34,12 +36,21 @@ class Home extends Component {
     })
   }
 
+  getCurrentTheme() {
+    fetch(`/api/v1/themes`, {credentials: 'same-origin'})
+    .then(response => {
+      let parsed = response.json()
+      return parsed
+    }).then(theme => {
+      this.setState({ theme: theme })
+    })
+  }
+
   render() {
-    let theme = "Star-Wars"
     return(
       <div>
         <h1 className="title">flipdog</h1>
-        <h5 id={theme} className="footer">Current Theme: {theme}</h5>
+        <h5 id={this.state.theme} className="footer">Current Theme: {this.state.theme}</h5>
         <hr width="20%"/>
         <PostTile
           nextDog={this.getPostData}

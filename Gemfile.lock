@@ -240,6 +240,8 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.7)
+    time-interval (0.0.5)
+      activesupport
     tins (1.13.2)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
@@ -278,6 +280,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   shoulda
+  time-interval
   uglifier (>= 1.3.0)
   valid_attribute
 
