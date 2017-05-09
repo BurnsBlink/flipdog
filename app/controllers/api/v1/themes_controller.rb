@@ -8,7 +8,7 @@ class Api::V1::ThemesController < ApiController
     start_time.step(end_time, 3) do |date|
       n += 1
       if (date..date + 3).cover?(DateTime.now.beginning_of_day)
-        render json: {id: n, theme: theme.next}
+        render json: { id: n, theme: theme.next }
       end
     end
   end
