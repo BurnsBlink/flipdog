@@ -4,12 +4,11 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 const NewPostForm = props => {
   return(
     <form onSubmit={props.handleSubmit}>
-      Dog Name: <input type="text" value={props.dogName} onChange={props.handleNewDogName} />
-      Description: <input type="text" value={props.description} onChange={props.handleNewDescription} />
-      Photo: <center><input type="text" value={props.image} onChange={props.handleNewImage} /></center>
+      Dog Name: <center><input className="react-form" type="text" value={props.dogName} onChange={props.handleNewDogName} /></center>
+      Description: <center><input className="react-form" type="text" value={props.description} onChange={props.handleNewDescription} /></center>
+      Photo: <center><input className="react-form" type="text" value={props.image} onChange={props.handleNewImage} /></center>
       <input type='submit' />
     </form>
-
   )
 }
 

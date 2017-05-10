@@ -69,7 +69,7 @@ class NewPost extends Component {
     return(
       <div>
         <button className="back" onClick={browserHistory.goBack}>Back</button>
-        <h2>Dress your Pup up and share!</h2>
+        <h2 className="title-form">Dress your Pup up and share!</h2>
         <NewPostForm
           handleNewDogName={this.handleNewDogName}
           handleNewDescription={this.handleNewDescription}
