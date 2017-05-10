@@ -43,7 +43,6 @@ class Home extends Component {
       return parsed
     }).then(theme => {
       this.setState({
-        themeId: theme.id,
         theme: theme.theme
       })
     })
@@ -65,10 +64,6 @@ class Home extends Component {
           firstName={this.state.firstName}
           lastInitial={this.state.lastInitial}
           voteCount={this.state.voteCount}
-        />
-        <ThemesController
-          themeId={this.state.themeId}
-          theme={this.state.theme}
         />
       </div>
     )
