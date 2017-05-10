@@ -18,6 +18,7 @@ class PostTile extends Component {
   render() {
     return (
       <div className="row">
+      <div className="small-12 columns">
         <div className="large-4 columns">
           <h1 className="dog-name">{this.props.dogName}</h1>
           <p className="description">{this.props.description}</p>
@@ -33,6 +34,7 @@ class PostTile extends Component {
           <Link to={`/posts/new`}>
             <button className="create">Add Photo!</button>
           </Link>
+        </div>
         </div>
       </div>
     );

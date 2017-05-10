@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, browserHistory } from 'react-router';
 import PostTile from '../components/PostTile';
-import themes from '../constants/themes'
+import ThemesController from '../containers/ThemesController';
 
 class Home extends Component {
   constructor(props){
@@ -43,7 +43,7 @@ class Home extends Component {
       return parsed
     }).then(theme => {
       this.setState({
-        themeID: theme.id,
+        themeId: theme.id,
         theme: theme.theme
       })
     })
@@ -53,7 +53,7 @@ class Home extends Component {
     return(
       <div>
         <h1 className="title">flipdog</h1>
-        <h5 id={this.state.theme} className="footer">Current Theme: {this.state.theme}</h5>
+        <h5 className="footer">Current Theme:<span id={this.state.theme}> {this.state.theme}</span></h5>
         <hr width="20%"/>
         <PostTile
           nextDog={this.getPostData}
@@ -65,6 +65,10 @@ class Home extends Component {
           firstName={this.state.firstName}
           lastInitial={this.state.lastInitial}
           voteCount={this.state.voteCount}
+        />
+        <ThemesController
+          themeId={this.state.themeId}
+          theme={this.state.theme}
         />
       </div>
     )

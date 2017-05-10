@@ -3,16 +3,16 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 
 class ThemesController extends Component {
   constructor(props){
-    super(props);
+    super(props)
     this.state = {
-
     }
   }
 
   render() {
     return(
       <div>
-      <h1>hi</h1>
+      <h2>Skal</h2>
+        <h1>{this.props.theme}</h1>
       </div>
     )
   }
