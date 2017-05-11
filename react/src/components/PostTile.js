@@ -28,13 +28,17 @@ class PostTile extends Component {
           <p className="vote-count">{this.state.voteCount}</p>
           <img className="upload" src={this.props.image}/>
         </div>
-        <div className="large-4 columns">
+          <div className="small-4 columns">
           <button className="upvote" onClick={this.handleUpVote}>Upvote!</button><br/>
+          </div>
+          <div className="small-4 columns">
           <button className="next" onClick={this.props.nextDog}>Next</button><br/>
+          </div>
+          <div className="small-4 columns">
           <Link to={`/posts/new`}>
             <button className="create">Add Photo!</button>
           </Link>
-        </div>
+          </div>
         </div>
       </div>
     );
