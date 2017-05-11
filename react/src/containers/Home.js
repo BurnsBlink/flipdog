@@ -9,7 +9,6 @@ class Home extends Component {
     this.state = {}
     this.componentDidMount = this.componentDidMount.bind(this)
     this.getPostData = this.getPostData.bind(this)
-    this.getCurrentTheme = this.getCurrentTheme.bind(this)
   }
 
   componentDidMount() {
@@ -46,6 +45,11 @@ class Home extends Component {
         theme: theme.theme
       })
     })
+  }
+
+  handleVoteCount(event){
+    let newVoteCount = event.target.value
+    this.setState({ voteCount: newDogName })
   }
 
   render() {

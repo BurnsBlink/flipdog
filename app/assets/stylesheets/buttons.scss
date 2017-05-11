@@ -78,19 +78,21 @@ $primary-green: green;
 
 .back {
   font-family: 'Arvo', serif;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: -30px;
   width: 70px;
   height: 35px;
   background: lightblue;
   transition:all 0.1s ease;
   outline: none;
   border-radius: 20%;
+
 }
 
 .back:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   background-color: $primary-blue;
   color: $primary-white;
 }
