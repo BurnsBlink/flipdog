@@ -19,14 +19,15 @@ class Layout extends Component {
   }
 
   render() {
-    let className
-    let id
+    let className, id, src
     if (this.state.menu === true){
       className = "menu-show"
       id = "img-bkgd"
+      src = "https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_close-128.png"
     } else {
       className = "menu-hide"
-      id = ''
+      id = ""
+      src = "https://www.pcta.org/wp-content/themes/pcta/images/p3/menu-toggle.png?x81138"
     }
 
     let onClick = () => {
@@ -35,7 +36,7 @@ class Layout extends Component {
 
     return(
       <div>
-        <img onClick={onClick} className='menu-image' id={id} src="https://www.pcta.org/wp-content/themes/pcta/images/p3/menu-toggle.png?x81138"/>
+        <img onClick={onClick} className='menu-image' id={id} src={src}/>
           <Link className={className} to={`/`}>Home</Link>
           <Link className={className} to={`/users/1`}>Profile</Link>
           <Link className={className} to={`themes`}>Past Winners</Link>
