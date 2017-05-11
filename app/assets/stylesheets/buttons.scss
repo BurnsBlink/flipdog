@@ -8,7 +8,7 @@ $primary-green: green;
 
 .upvote {
   font-family: 'Arvo', serif;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 90px;
   height: 50px;
   background: lightgreen;
@@ -22,9 +22,9 @@ $primary-green: green;
   background-position: center;
   background-size: 170px 50px;
   background-repeat: no-repeat;
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   color: transparent;
   border: 1px solid $primary-green;
   cursor: url('http://www.rw-designer.com/icon-image/10132-24x24x32.png'), default;
@@ -47,9 +47,9 @@ $primary-green: green;
 }
 
 .next:hover {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   background-color: $primary-blue;
   color: $primary-white;
   cursor: url('http://www.rw-designer.com/icon-image/3190-24x24x32.png'), default;
@@ -68,9 +68,9 @@ $primary-green: green;
 }
 
 .create:hover {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   background-color: $primary-yellow;
   color: $primary-black;
   cursor: pointer;
