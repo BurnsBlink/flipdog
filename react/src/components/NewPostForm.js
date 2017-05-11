@@ -7,6 +7,7 @@ const NewPostForm = props => {
       Dog Name: <center><input className="react-form" type="text" value={props.dogName} onChange={props.handleNewDogName} /></center>
       Description: <center><input className="react-form" type="text" value={props.description} onChange={props.handleNewDescription} /></center>
       Photo: <center><input className="react-form" type="text" value={props.image} onChange={props.handleNewImage} /></center>
+      <input className="hidden" value={props.themeId} onChange={props.handleThemeId} />
       <input type='submit' />
     </form>
   )

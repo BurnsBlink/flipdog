@@ -18,9 +18,9 @@ class App extends Component {
       <Router history={browserHistory}>
         <Route component={Layout}>
           <Route path="/" component={Home}/>
+          <Route path="/themes" component={ThemesController}/>
           <Route path="/users/1" component={Profile}/>
           <Route path="/posts/new" component={NewPost}/>
-          <Route path="/themes" component={ThemesController}/>
         </Route>
       </Router>
     )

@@ -12,9 +12,11 @@ class NewPost extends Component {
       image: '',
       message: []
     }
+    this.componentDidMount = this.componentDidMount.bind(this)
     this.handleNewDogName = this.handleNewDogName.bind(this)
     this.handleNewDescription = this.handleNewDescription.bind(this)
     this.handleNewImage = this.handleNewImage.bind(this)
+    this.handleThemeId = this.handleThemeId.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
@@ -24,6 +26,15 @@ class NewPost extends Component {
     .then(user => {
       this.setState({
         id: user.id
+      })
+    })
+    fetch(`/api/v1/themes`, {credentials: 'same-origin'})
+    .then(response => {
+      let parsed = response.json()
+      return parsed
+    }).then(theme => {
+      this.setState({
+        themeId: theme.id
       })
     })
   }
@@ -43,13 +54,19 @@ class NewPost extends Component {
     this.setState({ image: newImage })
   }
 
+  handleThemeId(event){
+    let theTheme = event.target.value
+    this.setState({ themeId: theTheme })
+  }
+
   handleSubmit(event){
     event.preventDefault()
     let requestBody = {
       user_id: this.state.id,
       dog_name: this.state.dogName,
       description: this.state.description,
-      image_url: this.state.image
+      image_url: this.state.image,
+      theme_id: this.state.themeId
     }
     fetch('/api/v1/posts', {
       method: 'POST',
@@ -74,10 +91,12 @@ class NewPost extends Component {
           handleNewDogName={this.handleNewDogName}
           handleNewDescription={this.handleNewDescription}
           handleNewImage={this.handleNewImage}
+          handleThemeId={this.handleThemeId}
           handleSubmit={this.handleSubmit}
           name={this.state.dogName}
           description={this.state.description}
           image={this.state.image}
+          themeId={this.state.themeId}
         />
       </div>
     )
