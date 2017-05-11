@@ -5,33 +5,40 @@ class Layout extends Component {
   constructor(props){
     super(props)
     this.state = {
-      menu: true
+      menu: null
     }
-    this.handleClick = this.handleClick.bind(this);
+    this.handleMenuClick = this.handleMenuClick.bind(this);
   }
 
-  handleClick(){
-    let clicker = !this.state.menu
-    this.setState({ menu: clicker })
+  handleMenuClick(event){
+    if (this.state.menu === event) {
+      this.setState({ menu: null})
+    } else {
+      this.setState({ menu: true })
+    }
   }
 
   render() {
-    let showing
-      if (this.state.menu) {
-        showing = "show"
-      } else {
-        showing = "hidden"
-      }
+    let className
+    let id
+    if (this.state.menu === true){
+      className = "menu-show"
+      id = "img-bkgd"
+    } else {
+      className = "menu-hide"
+      id = ''
+    }
+
+    let onClick = () => {
+      this.handleMenuClick(true)
+    }
 
     return(
       <div>
-        <div>
-          <div onClick={this.handleClick}>
-            <Link className="navbar" to={`/`}>Home</Link>
-            <Link className="navbar" to={`/users/1`}>Profile</Link>
-            <Link className="navbar" to={`themes`}>Past Winners</Link>
-          </div>
-        </div>
+        <img onClick={onClick} className='menu-image' id={id} src="https://www.pcta.org/wp-content/themes/pcta/images/p3/menu-toggle.png?x81138"/>
+          <Link className={className} to={`/`}>Home</Link>
+          <Link className={className} to={`/users/1`}>Profile</Link>
+          <Link className={className} to={`themes`}>Past Winners</Link>
         {this.props.children}
       </div>
     )

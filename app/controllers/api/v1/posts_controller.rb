@@ -14,4 +14,16 @@ class Api::V1::PostsController < ApiController
     post = Post.all.sample
     render json: post
   end
+
+  def update
+    binding.pry
+    body = request.body.read
+    parsed = JSON.parse(body)
+    post = Post.new(parsed)
+    if post.save
+      render json: { message: 'Success!' }
+    else
+      render json: { message: post.errors.full_messages }
+    end
+  end
 end

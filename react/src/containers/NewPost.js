@@ -10,7 +10,8 @@ class NewPost extends Component {
       dogName: '',
       description: '',
       image: '',
-      message: []
+      message: [],
+      selectedInstructions: null
     }
     this.componentDidMount = this.componentDidMount.bind(this)
     this.handleNewDogName = this.handleNewDogName.bind(this)
@@ -18,6 +19,7 @@ class NewPost extends Component {
     this.handleNewImage = this.handleNewImage.bind(this)
     this.handleThemeId = this.handleThemeId.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSelectedInstruction = this.handleSelectedInstruction.bind(this)
   }
 
   componentDidMount() {
@@ -82,10 +84,28 @@ class NewPost extends Component {
     browserHistory.push('/')
   }
 
+  handleSelectedInstruction(event){
+    if (this.state.selectedInstructions === event) {
+      this.setState({ selectedInstructions: null})
+    } else {
+      this.setState({ selectedInstructions: true })
+    }
+  }
+
   render() {
+    let className
+    if (this.state.selectedInstructions === true){
+      className = "show"
+    } else {
+      className = "hide"
+    }
+
+    let onClick = () => {
+      this.handleSelectedInstruction(true)
+    }
     return(
       <div>
-        <button className="back" onClick={browserHistory.goBack}>Back</button>
+        <button className="back" onClick={browserHistory.goBack}>Back</button><br/><br/>
         <h2 className="title-form">Dress your Pup up and share!</h2>
         <NewPostForm
           handleNewDogName={this.handleNewDogName}
@@ -97,6 +117,8 @@ class NewPost extends Component {
           description={this.state.description}
           image={this.state.image}
           themeId={this.state.themeId}
+          className={className}
+          onClick={onClick}
         />
       </div>
     )

@@ -5,14 +5,21 @@ class PostTile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      voteCount: this.props.voteCount
+      voteCount: this.props.voteCount,
+      clicker: 0
     }
     this.handleUpVote = this.handleUpVote.bind(this)
   }
 
   handleUpVote() {
-    let upvote = this.state.voteCount + 1
-    this.setState({ voteCount: upvote })
+    if (this.state.clicker === 0) {
+      let upvote = this.state.voteCount + 1
+      let clicked = this.state.clicker + 1
+      this.setState({
+        voteCount: upvote,
+        clicker: clicked
+      })
+    }
   }
 
   render() {
