@@ -39,7 +39,7 @@ class Layout extends Component {
         <img onClick={onClick} className='menu-image' id={id} src={src}/>
           <Link className={className} to={`/`}>Home</Link>
           <Link className={className} to={`/users/1`}>Profile</Link>
-          <Link className={className} to={`themes`}>Past Winners</Link>
+          <Link className={className} to={`/themes`}>Past Winners</Link>
         {this.props.children}
       </div>
     )

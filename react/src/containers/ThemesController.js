@@ -11,10 +11,15 @@ class ThemesController extends Component {
   }
 
   componentDidMount() {
+    this.getThemeWinners()
+  }
+
+  getThemeWinners() {
     fetch(`/api/v1/themeposts`, {credentials: 'same-origin'})
     .then(response => response.json())
     .then(posts => {
       this.setState({
+        // previousTheme: posts.theme,
         winnerId: posts[2].id,
         winnerHuman: posts[2].user.first_name + ' ' + posts[2].user.last_name,
         winnerDogName: posts[2].dog_name,
@@ -37,10 +42,10 @@ class ThemesController extends Component {
     })
   }
 
-
   render() {
     return(
       <div>
+      <h5 className="winner-theme">Last Theme:<span id={this.state.previousTheme}> {this.state.previousTheme}</span></h5>
         <ThemeTile
           winnerId={this.state.winnerId}
           winnerHuman={this.state.winnerHuman}

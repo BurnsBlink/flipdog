@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import NewPost from '../containers/NewPost';
 import ThemesController from '../containers/ThemesController';
 
+
 class App extends Component {
   constructor(props){
     super(props)
