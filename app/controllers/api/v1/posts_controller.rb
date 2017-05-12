@@ -19,8 +19,9 @@ class Api::V1::PostsController < ApiController
 
     start_time.step(end_time, 3) do |date|
       if (date..date + 3).cover?(DateTime.now)
-        current_theme = theme.next
+        theme.next
         theme_id = theme_id.next
+        break
       else
         theme.next
         theme_id.next

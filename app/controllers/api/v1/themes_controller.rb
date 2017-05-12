@@ -10,6 +10,7 @@ class Api::V1::ThemesController < ApiController
         current_theme = theme.next
         theme_id = theme_id.next
         render json: { id: theme_id, theme: current_theme }
+        break
       else
         theme.next
         theme_id.next

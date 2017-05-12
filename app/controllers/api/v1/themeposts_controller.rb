@@ -17,8 +17,9 @@ class Api::V1::ThemepostsController < ApiController
       end
     end
 
-    post = Post.all.where(theme_id: @last_id)
-    winning_posts = post.order(:vote_count).last(3)
-    render json: winning_posts
+    posts = Post.where(theme_id: @last_id).order(:vote_count).last(3)
+    winning_posts = PostSerializer.new(posts)
+    
+    render json: posts, each_serializer: PostSerializer
   end
 end

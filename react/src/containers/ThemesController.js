@@ -19,7 +19,7 @@ class ThemesController extends Component {
     .then(response => response.json())
     .then(posts => {
       this.setState({
-        // previousTheme: posts.theme,
+        previousTheme: posts[0].theme.theme,
         winnerId: posts[2].id,
         winnerHuman: posts[2].user.first_name + ' ' + posts[2].user.last_name,
         winnerDogName: posts[2].dog_name,
