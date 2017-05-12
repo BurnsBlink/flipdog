@@ -5,7 +5,7 @@ const ProfileTile = props => {
   return (
     <div className="row">
       <div className="large-4 columns">
-        <h3 className="title-form">Hello there {props.firstName}!</h3>
+        <h3 className="profile-title">Hello there {props.firstName}!</h3>
         <img className="profile-pic" src="https://thumb.ibb.co/mX2G6Q/Screen_Shot_2017_04_25_at_10_31_58_PM.png" />
         <hr width="10%"/>
       </div>

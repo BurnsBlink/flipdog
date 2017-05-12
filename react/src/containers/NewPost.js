@@ -36,7 +36,8 @@ class NewPost extends Component {
       return parsed
     }).then(theme => {
       this.setState({
-        themeId: theme.id
+        themeId: theme.id,
+        theme: theme.theme
       })
     })
   }
@@ -107,6 +108,7 @@ class NewPost extends Component {
       <div>
         <button className="back" onClick={browserHistory.goBack}>Back</button><br/><br/>
         <h2 className="title-form">Dress your Pup up and share!</h2>
+        <h5 className="footer">Current Theme:<span id={this.state.theme}> {this.state.theme}</span></h5><br/>
         <NewPostForm
           handleNewDogName={this.handleNewDogName}
           handleNewDescription={this.handleNewDescription}
@@ -117,6 +119,7 @@ class NewPost extends Component {
           description={this.state.description}
           image={this.state.image}
           themeId={this.state.themeId}
+          theme={this.state.theme}
           className={className}
           onClick={onClick}
         />

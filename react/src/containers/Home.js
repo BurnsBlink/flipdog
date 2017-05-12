@@ -22,16 +22,23 @@ class Home extends Component {
       let parsed = response.json()
       return parsed
     }).then(posts => {
+      if (posts !== null){
       this.setState({
-        id: posts.id,
-        dogName: posts.dog_name,
-        image: posts.image_url,
-        description: posts.description,
-        userId: posts.user.id,
-        voteCount: posts.vote_count,
-        firstName: posts.user.first_name,
-        lastInitial: posts.user.last_name[0]
-      })
+          id: posts.id,
+          dogName: posts.dog_name,
+          image: posts.image_url,
+          description: posts.description,
+          userId: posts.user.id,
+          voteCount: posts.vote_count,
+          firstName: posts.user.first_name,
+          lastInitial: posts.user.last_name[0]
+        })} else {
+          this.setState({
+          dogName: "No uploads yet!",
+          description: "Be the first! Click add photo",
+          image: "http://www.westmountanimalclinic.com/wp-content/uploads/2016/01/dog_question-300x225.jpg"
+        })
+      }
     })
   }
 
@@ -49,7 +56,7 @@ class Home extends Component {
 
   handleVoteCount(event){
     let newVoteCount = event.target.value
-    this.setState({ voteCount: newDogName })
+    this.setState({ voteCount: newVoteCount })
   }
 
   render() {
