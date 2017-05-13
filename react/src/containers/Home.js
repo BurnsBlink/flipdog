@@ -49,7 +49,9 @@ class Home extends Component {
       return parsed
     }).then(theme => {
       this.setState({
-        theme: theme.theme
+        theme: theme.theme,
+        dateSwitch: theme.date,
+        nextTheme: theme.next_theme
       })
     })
   }
@@ -63,7 +65,7 @@ class Home extends Component {
     return(
       <div>
         <h1 className="title">flipdog</h1>
-        <h5 className="footer">Current Theme:<span id={this.state.theme}> {this.state.theme}</span></h5>
+        <h5 className="theme-layout">Current Theme:<span id={this.state.theme}> {this.state.theme}</span></h5>
         <hr width="20%"/>
         <PostTile
           nextDog={this.getPostData}
@@ -76,6 +78,10 @@ class Home extends Component {
           lastInitial={this.state.lastInitial}
           voteCount={this.state.voteCount}
         />
+        <div className="footer">
+          <hr width="80%"/>
+          <p className="countdown">Next Theme " <span className={this.state.nextTheme}>{this.state.nextTheme}</span> " @ {this.state.dateSwitch} EST</p>
+        </div>
       </div>
     )
   }

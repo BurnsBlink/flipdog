@@ -108,7 +108,7 @@ class NewPost extends Component {
       <div>
         <button className="back" onClick={browserHistory.goBack}>Back</button><br/><br/>
         <h2 className="title-form">Dress your Pup up and share!</h2>
-        <h5 className="footer">Current Theme:<span id={this.state.theme}> {this.state.theme}</span></h5><br/>
+        <h5 className="theme-layout">Current Theme:<span id={this.state.theme}> {this.state.theme}</span></h5><br/>
         <NewPostForm
           handleNewDogName={this.handleNewDogName}
           handleNewDescription={this.handleNewDescription}

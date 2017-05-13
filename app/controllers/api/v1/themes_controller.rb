@@ -8,8 +8,10 @@ class Api::V1::ThemesController < ApiController
     start_time.step(end_time, 3) do |date|
       if (date..date + 3).cover?(DateTime.now)
         current_theme = theme.next
+        next_theme = theme.next
         theme_id = theme_id.next
-        render json: { id: theme_id, theme: current_theme }
+        date_switch = (date + 3).strftime('%m-%d-%Y %I:%M %p')
+        render json: { id: theme_id, theme: current_theme, date: date_switch, next_theme: next_theme }
         break
       else
         theme.next

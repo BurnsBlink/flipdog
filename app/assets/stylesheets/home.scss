@@ -75,3 +75,13 @@ a:hover {
   top: 14px;
   color: $primary-white;
 }
+
+.footer {
+  font-family: 'Arvo', serif;
+  font-size: 12px;
+  margin-top: 40px;
+  position:absolute;
+  left:0;
+  bottom:-50;
+  right:0;
+}
