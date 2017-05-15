@@ -14,8 +14,8 @@ class Api::V1::PostsController < ApiController
     # resets the theme and posts every 3 days
     theme = Theme.pluck(:theme).cycle
     theme_id = Theme.pluck(:id).cycle
-    start_time = DateTime.new(2017, 5, 11, 04, 00)
-    end_time = DateTime.new(2018, 5, 11, 04, 00)
+    start_time = DateTime.new(2017, 5, 11, 00, 00).change(offset: "+0400")
+    end_time = DateTime.new(2018, 5, 11, 00, 00).change(offset: "+0400")
 
     start_time.step(end_time, 3) do |date|
       if (date..date + 3).cover?(DateTime.now)
