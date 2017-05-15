@@ -4,6 +4,7 @@ $primary-yellow: #fecc00;
 $primary-white: #f4f4f4;
 $background: #f4f4f4;
 $primary-black: #0A0310;
+$voted-green: #0cff00;
 @import url('https://fonts.googleapis.com/css?family=Finger+Paint');
 @import url('https://fonts.googleapis.com/css?family=Arvo');
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
@@ -74,6 +75,10 @@ a:hover {
   left: 120px;
   top: 14px;
   color: $primary-white;
+}
+
+#green-vote {
+  color: $voted-green;
 }
 
 .footer {

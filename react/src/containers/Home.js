@@ -6,14 +6,19 @@ import ThemesController from '../containers/ThemesController';
 class Home extends Component {
   constructor(props){
     super(props);
-    this.state = {}
+    this.state = {
+      message: ''
+    }
     this.componentDidMount = this.componentDidMount.bind(this)
     this.getPostData = this.getPostData.bind(this)
+    this.getCurrentTheme = this.getCurrentTheme.bind(this)
+    this.getSignedInUser = this.getSignedInUser.bind(this)
   }
 
   componentDidMount() {
     this.getPostData()
     this.getCurrentTheme()
+    this.getSignedInUser()
   }
 
   getPostData() {
@@ -56,9 +61,16 @@ class Home extends Component {
     })
   }
 
-  handleVoteCount(event){
-    let newVoteCount = event.target.value
-    this.setState({ voteCount: newVoteCount })
+  getSignedInUser() {
+    fetch(`/api/v1/users`, {credentials: 'same-origin'})
+    .then(response => {
+      let parsed = response.json()
+      return parsed
+    }).then(user => {
+      this.setState({
+        currentUser: user.id
+      })
+    })
   }
 
   render() {
@@ -69,6 +81,7 @@ class Home extends Component {
         <hr width="20%"/>
         <PostTile
           nextDog={this.getPostData}
+          currentUser={this.state.currentUser}
           key={this.state.id}
           id={this.state.id}
           dogName={this.state.dogName}
