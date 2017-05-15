@@ -32,11 +32,6 @@ class Api::V1::PostsController < ApiController
     render json: post
   end
 
-  def show
-    post = Post.find(params[:id])
-    render json: post
-  end
-
   def update
     post = Post.find(params[:id])
     user_id = request.body.read
