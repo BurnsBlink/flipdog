@@ -1,5 +1,4 @@
 class Api::V1::PostsController < ApiController
-
   def create
     body = request.body.read
     parsed = JSON.parse(body)

@@ -10,17 +10,6 @@ class PostTile extends Component {
     this.handleVoteCount = this.handleVoteCount.bind(this)
   }
 
-  // handleUpVote() {
-  //   debugger;
-  //   if (this.props.message != "Already Voted!") {
-  //     let upvote = this.state.voteCount + 1
-  //     this.setState({
-  //       voteCount: upvote
-  //     })
-  //     this.props.handleVoteCount()
-  //   }
-  // }
-
   handleVoteCount(){
     event.preventDefault()
     let postId = this.props.id
@@ -33,7 +22,7 @@ class PostTile extends Component {
       let parsed = response.json()
       return parsed
     }).then(message => {
-      if (message.message != "Already Voted!") {
+      if (message.message !== "Already Voted!") {
         let upvote = this.state.voteCount + 1
         this.setState({
           voteCount: upvote,
