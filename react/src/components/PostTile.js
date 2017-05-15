@@ -5,21 +5,31 @@ class PostTile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      voteCount: this.props.voteCount,
-      clicker: 0
+      voteCount: this.props.voteCount
     }
-    this.handleUpVote = this.handleUpVote.bind(this)
+    this.handleVoteCount = this.handleVoteCount.bind(this)
   }
 
-  handleUpVote() {
-    if (this.state.clicker === 0) {
-      let upvote = this.state.voteCount + 1
-      let clicked = this.state.clicker + 1
-      this.setState({
-        voteCount: upvote,
-        clicker: clicked
-      })
-    }
+  handleVoteCount(){
+    event.preventDefault()
+    let postId = this.props.id
+    fetch(`/api/v1/posts/${postId}`, {
+      method: 'PUT',
+      body: JSON.stringify(this.props.currentUser),
+      credentials: 'include'
+    })
+    .then(response => {
+      let parsed = response.json()
+      return parsed
+    }).then(message => {
+      if (message.message !== "Already Voted!") {
+        let upvote = this.state.voteCount + 1
+        this.setState({
+          voteCount: upvote,
+          votedYes: "green-vote"
+        })
+      }
+    })
   }
 
   render() {
@@ -32,11 +42,11 @@ class PostTile extends Component {
           <p className="poster-name">human: {this.props.firstName} {this.props.lastInitial}.</p>
         </div>
         <div className="content large-4 columns">
-          <p className="vote-count">{this.state.voteCount}</p>
+          <p className="vote-count" id={this.state.votedYes}>{this.state.voteCount}</p>
           <img className="upload" src={this.props.image}/>
         </div>
           <div className="small-4 columns">
-          <button className="upvote" onClick={this.handleUpVote}>Upvote!</button><br/>
+          <button className="upvote" onClick={this.handleVoteCount}>Upvote!</button><br/>
           </div>
           <div className="small-4 columns">
           <button className="next" onClick={this.props.nextDog}>Next</button><br/>
