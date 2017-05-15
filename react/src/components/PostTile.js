@@ -11,6 +11,7 @@ class PostTile extends Component {
   }
 
   handleVoteCount(){
+    event.preventDefault()
     let postId = this.props.id
     fetch(`/api/v1/posts/${postId}`, {
       method: 'PUT',
