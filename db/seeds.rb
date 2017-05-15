@@ -17,7 +17,7 @@ Post.create(dog_name: "Sir Barksley", vote_count: 2, image_url: "https://img0.et
 Post.create(dog_name: "Baxter", image_url: "http://www3.pictures.zimbio.com/mp/r_Mf-uluvPrx.jpg", description: "Give me treats, you will...", user: fryguy, theme: starwars)
 Post.create(dog_name: "King", vote_count: 22, image_url: "http://i1.mirror.co.uk/incoming/article6965338.ece/ALTERNATES/s615b/PAY-Storm-Trooper-Dog.jpg", description: "I even miss when I go pee-pees", user: mister, theme: starwars)
 
-Post.create(dog_name: "Rollo", vote_count: 19, image_url: "https://img0.etsystatic.com/125/0/10692466/il_340x270.981333968_ily8.jpg", description: "Captian Golden", user: thor, theme: superhero)
+Post.create(dog_name: "Rollo", vote_count: 19, image_url: "https://img0.etsystatic.com/125/0/10692466/il_340x270.981333968_ily8.jpg", description: "Captain Golden", user: thor, theme: superhero)
 Post.create(dog_name: "Odin", vote_count: 39, image_url: "https://s-media-cache-ak0.pinimg.com/originals/06/84/4d/06844d7932c5b9abbf4c69ae7c972ccb.jpg", description: "I bring the lightning", user: thor, theme: superhero)
 Post.create(dog_name: "Thunder", vote_count: 11, image_url: "http://media.danoah.com/wp-content/uploads/2015/08/05033040/3-buddha-bullodog-batman-dog-costume.jpg", description: "The watcher of the night", user: fryguy, theme: superhero)
 Post.create(dog_name: "Misty", vote_count: 4, image_url: "https://img0.etsystatic.com/068/0/6048132/il_570xN.797235646_57wm.jpg", description: "The fastest dog alive", user: misty, theme: superhero)
