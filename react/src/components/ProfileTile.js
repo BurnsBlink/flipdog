@@ -12,12 +12,12 @@ const ProfileTile = props => {
       <div className="profile-posts large-8 columns">
         <h4 className="title-form">Most Recent Post:</h4>
         <img className="last-image"src={props.images.slice(-1)}/>
-        <p className="dog-name">{props.dogNames.slice(-1)}</p>
+        <h1 className="dog-name">{props.dogNames.slice(-1)}</h1>
         <p className="description">{props.descriptions.slice(-1)}</p>
         <hr width="80%"/>
         <h4 className="title-form">First Post:</h4>
         <img className="last-image"src={props.images[0]}/>
-        <p className="dog-name">{props.dogNames[0]}</p>
+        <h1 className="dog-name">{props.dogNames[0]}</h1>
         <p className="description">{props.descriptions[0]}</p>
         <hr width="80%"/>
       </div>
