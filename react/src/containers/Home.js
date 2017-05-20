@@ -93,7 +93,7 @@ class Home extends Component {
         />
         <div className="footer">
           <hr width="80%"/>
-          <p className="countdown">Next Theme " <span className={this.state.nextTheme}>{this.state.nextTheme}</span> " @ {this.state.dateSwitch} EST</p>
+          <p className="countdown">Next Theme " <span className={this.state.nextTheme}>{this.state.nextTheme}</span> " @ {this.state.dateSwitch} at Midnight EST</p>
         </div>
       </div>
     )
