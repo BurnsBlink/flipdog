@@ -4,6 +4,9 @@
 ![Code Climate](https://codeclimate.com/github/BurnsBlink/flipdog.png)
 ![Coverage Status](https://coveralls.io/repos/BurnsBlink/flipdog/badge.png)
 
+------
+flipdog.herokuapp.com
+------
 Run on Console:
 rails s + npm start
 
