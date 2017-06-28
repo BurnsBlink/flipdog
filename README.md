@@ -5,7 +5,7 @@
 ![Coverage Status](https://coveralls.io/repos/BurnsBlink/flipdog/badge.png)
 
 ------
-flipdog.herokuapp.com
+https://flipdog.herokuapp.com/
 ------
 Run on Console:
 rails s + npm start
